@@ -1,0 +1,115 @@
+/* EJERCICIO PALETA */
+
+/* .btn-red{
+    width: 100px;
+    height: 30px;
+    background-color: red;
+}
+
+.btn-blue{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(0, 13, 255);
+}
+
+.btn-green{
+    width: 100px;
+    height: 30px;
+    background-color: rgb(5, 128, 13);
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    border: solid 2px black;
+    margin-top: 30px;
+} */
+
+
+/* <!-- EJERCICIO EMAIL --> */
+
+/* li{
+    font-size: 20px;
+    font-weight: bold;
+
+} */
+
+/* .emailLeido{
+    color: gray;
+    font-weight: normal;
+} */
+
+/* <!-- EJERCICIO SCROLL --> */
+
+/* body{
+    height: 2000px;
+} */
+
+/* <!-- EJERCICIO PROGRESO --> */
+
+/* .cont-barra{
+    width: 1000px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.progreso-barra{
+    background-color: blue;
+    width: 0;
+    height: 100px;
+} */
+
+/* <!-- EJERCICIO MODO OSCURO --> */
+
+/* .modoOscuro{
+    background-color: black;
+    color: white;
+} */
+
+/* <!-- EJERCICIOS IMAGENES E IMAGENES - 2 --> */
+
+/* .img-chica{
+    height: 100px;
+}
+
+
+.img-grande{
+    height: 500px;
+} */
+
+/* <!-- EJERCICIOS PELICULAS --> */
+
+/* img{
+    height: 250px;
+    margin: 10px;
+} */
+/*
+button{
+    display: block;
+    margin: 20px;
+} */
+
+/* <!-- EJERCICIOS PIN --> */
+
+/* button{
+    margin: 10px;
+}
+
+.pin-ingresado{
+    width: 200px;
+    height: 40px;
+    margin: 15px;
+    border: 2px solid black;
+} */
+
+/* <!-- EJERCICIO FAVORITOS --> */
+
+img{
+    height: 250px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.uno-uno{
+    height: 300px;
+}
