@@ -505,48 +505,55 @@ let $ = (selector)=> document.querySelector(selector);
 // cinco.addEventListener('click', ingresarPin);
 
 
-// favoritos❌
+// favoritos
 // Crear dos contenedores, uno para imágenes y otro para favoritos. En el contenedor de imágenes, agregar al menos 10 imágenes (cualesquiera). Al clickear una imagen en el contenedor de imágenes, se debe agregar la misma imagen en el contenedor de favoritos. Al clickear una imagen en el contenedor de favoritos, se debe eliminar la imagen seleccionada de dicho contenedor.
 
-let uno = $('.uno');
-let dos = $('.dos');
-let tres = $('.tres');
-let cuatro = $('.cuatro');
-let cinco = $('.cinco');
-let seis = $('.seis');
-let favoritos = $('.favoritos');
+//const $ = (selector) => document.querySelector(selector);
 
-let elegidos = ''
+let contenedorImagenes = $("#imagenes");
+let contenedorFavoritos = $("#favoritos");
 
-let elegirFavorito = (event) =>{
+// Primer solucion
 
-   let urlImagen = event.path[0].currentSrc;
+// contenedorImagenes.addEventListener("click", (event) => {
+//   let elemento = event.target;
+//   if (elemento.classList.contains("img")) {
+//     contenedorFavoritos.innerHTML += `<img src=${elemento.src} alt="" class="img" id=${elemento.id}>`;
+//     elemento.remove();
+//   }
+// });
 
-   let clase = event.path[0].classList[0];
+// contenedorFavoritos.addEventListener("click", (event) => {
+//   let elemento = event.target;
 
-   let etiquetaImg = `<img src="${urlImagen}" alt="" class="${clase}-nuevo">`;
+//   if (elemento.classList.contains("img")) {
+//     contenedorImagenes.innerHTML += `<img src=${elemento.src} alt="" class="img" id=${elemento.id}>`;
+//     elemento.remove();
+//   }
+// });
 
-   elegidos = elegidos + etiquetaImg;
+// Segunda
 
-   favoritos.innerHTML = elegidos;
+contenedorImagenes.addEventListener("click", (event) => {
+  let elemento = event.target;
+  if (elemento.classList.contains("img")) {
+    if (contenedorFavoritos.classList.contains(elemento.id)) {
+      alert("ya esta en favoritos esta imagen");
+    } else {
+      contenedorFavoritos.innerHTML += `<img src=${elemento.src} alt="" class="img" id=${elemento.id}>`;
+      contenedorFavoritos.classList.add(elemento.id);
+    }
+  }
+});
 
-   let unoNuevo = $('.uno-nuevo')
+contenedorFavoritos.addEventListener("click", (event) => {
+  let elemento = event.target;
 
-
-   unoNuevo.addEventListener('click', ()=>{
-      unoNuevo.style.display = 'none';
-
-})
-
-}
-
-uno.addEventListener('click', elegirFavorito);
-dos.addEventListener('click', elegirFavorito);
-tres.addEventListener('click', elegirFavorito);
-cuatro.addEventListener('click', elegirFavorito);
-cinco.addEventListener('click', elegirFavorito);
-seis.addEventListener('click', elegirFavorito);
-
+  if (elemento.classList.contains("img")) {
+    contenedorFavoritos.classList.remove(elemento.id);
+    elemento.remove();
+  }
+});
 
 
 // color-aleatorio✅
